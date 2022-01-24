@@ -1,5 +1,4 @@
 function calc(id, a, b) {
-	let result;
 	const mistake = (typeof a !== 'number' || typeof b !== 'number' || id === undefined);
 	switch (id) {
 		case 'Error':
