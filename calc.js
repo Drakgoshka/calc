@@ -1,29 +1,35 @@
 function calc(id, a, b) {
-	const mistake = (typeof a !== 'number' || typeof b !== 'number' || id === undefined);
+	const isNotValid = typeof a !== 'number' || typeof b !== 'number' || id === undefined;
+	if (isNotValid) {
+		console.log("error");
+	} else {
 	switch (id) {
-		case 'Error':
-			break;
+		case'isNotValid':
+		console.log("Error");
+		break;
+
 		case 'sum':
 			return a + b;
-			break;
+
 		case 'sub':
 			return a - b;
-			break;
+			
 		case 'multi':
 			return a * b;
-			break;
+			
 		case 'div':
 			return a / b;
-			break;
+			
 		case 'erect':
 			return a ** b;
 			break;
 		case 'remains':
 			return a % b;
-			break;
+			
 		default:
 			return 'Unknown operation';
 	}
 }
+}
 
-console.log(calc('remains', 11, 2));
+console.log(calc('remains', 9, 2));
